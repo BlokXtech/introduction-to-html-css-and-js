@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toyota Corolla Models</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        
+        header {
+            background-color: #0072C6; /* Toyota Blue */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .car-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        .car {
+            background-color: white;
+            width: 45%;
+            min-width: 300px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .car-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .car-content {
+            flex: 1;
+        }
+        
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        th {
+            background-color: #0072C6;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        
+        h2 {
+            color: #0072C6;
+            margin-top: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .car {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Toyota Corolla Models</h1>
+        <p>Reliable and efficient sedans from Toyota</p>
+         <a href="../../cars/toyota.html"> <button>go back</button></a>
+    </header>
+    
+    <div class="car-container">
+        <div class="car">
+            <img src="../../images/corolla sedan.jpg" alt="Corolla Sedan" class="car-image">
+            <div class="car-content">
+                <h2>Corolla Sedan</h2>
+                <p>The Toyota Corolla Sedan offers a perfect blend of comfort, efficiency, and modern technology for everyday driving.</p>
+                <h3>Key Features:</h3>
+                <ul>
+                    <li>1.8L 4-cylinder engine (139hp)</li>
+                    <li>CVT transmission</li>
+                    <li>Toyota Safety Sense 2.0</li>
+                    <li>Apple CarPlay & Android Auto</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="car">
+            <img src="../../images/corola hatch back.jpg" alt="Corolla Hatchback" class="car-image">
+            <div class="car-content">
+                <h2>Corolla Hatchback</h2>
+                <p>The sporty Corolla Hatchback combines dynamic styling with practical cargo space for a more engaging drive.</p>
+                <h3>Key Features:</h3>
+                <ul>
+                    <li>2.0L Dynamic Force engine (168hp)</li>
+                    <li>6-speed manual or CVT</li>
+                    <li>Sport-tuned suspension</li>
+                    <li>18-inch alloy wheels</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <table>
+        <tr>
+            <th>Year</th>
+            <th>Model</th>
+            <th>Engine</th>
+            <th>Power</th>
+            <th>Fuel Economy</th>
+            <th>Price (NAD)</th>
+        </tr>
+        <tr>
+            <td>2024</td>
+            <td>Corolla LE</td>
+            <td>1.8L I4</td>
+            <td>139hp</td>
+            <td>7.1L/100km</td>
+            <td>N$ 350,000</td>
+        </tr>
+        <tr>
+            <td>2024</td>
+            <td>Corolla SE</td>
+            <td>2.0L I4</td>
+            <td>169hp</td>
+            <td>6.7L/100km</td>
+            <td>N$ 380,000</td>
+        </tr>
+        <tr>
+            <td>2024</td>
+            <td>Corolla Hybrid LE</td>
+            <td>1.8L Hybrid</td>
+            <td>121hp</td>
+            <td>4.5L/100km</td>
+            <td>N$ 400,000</td>
+        </tr>
+        <tr>
+            <td>2024</td>
+            <td>Corolla Hatchback SE</td>
+            <td>2.0L I4</td>
+            <td>168hp</td>
+            <td>7.2L/100km</td>
+            <td>N$ 390,000</td>
+        </tr>
+    </table>
+    
+    <footer>
+        <p>Toyota Corolla Models &copy; 2024 | Toyota Motor Corporation</p>
+    </footer>
+</body>
+</html>

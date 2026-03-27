@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Forex Trading Platform</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<link rel="stylesheet" href="fx.css">
+</head>
+<body>
+<header>
+  <div class="account-info" aria-label="Account information">
+    <span><i class="material-icons" aria-hidden="true">account_balance</i> Balance: $<span data-value id="account-balance">100,000</span></span>
+    <span>P&L: <span id="account-pnl" class="pnlgain">+0.00%</span></span>
+  </div>
+  <div class="market-status" aria-label="Market status">
+    <span><i class="material-icons" aria-hidden="true">trending_up</i> Market: <span id="market-status">Open</span></span>
+  </div>
+  <div class="notifications" aria-label="Notifications">
+    <button aria-label="View notifications" id="notifications-btn" title="Notifications"><i class="material-icons" aria-hidden="true">notifications</i></button>
+  </div>
+</header>
+<!-- Left Sidebar -->
+<aside id="sidebar-left" aria-label="Watchlist and Order book">
+  <h2>Watchlist</h2>
+  <div id="watchlist" role="table" aria-label="Currency pairs watchlist summary">
+    <table>
+      <thead>
+        <tr><th scope="col">Symbol</th><th scope="col">Last Price</th><th scope="col">Change</th><th scope="col">Volume</th></tr>
+      </thead>
+      <tbody id="watchlist-tbody"></tbody>
+    </table>
+  </div>
+  <section id="order-book" aria-label="Order book overview">
+    <h3>Order Book</h3>
+    <div id="order-book-content">
+      <p style="color:#6b7280; font-size:0.9rem;">Order book data coming soon...</p>
+    </div>
+  </section>
+</aside>
+
+<!-- Main Content -->
+<main>
+  <section id="chart-container" aria-label="Interactive candlestick chart with indicators">
+    <div id="chart-header">
+      <div id="current-symbol" aria-live="polite">EUR/USD</div>
+      <nav id="timeframes" role="navigation" aria-label="Chart timeframes">
+        <button data-timeframe="1" class="active" aria-pressed="true">1m</button>
+        <button data-timeframe="5" aria-pressed="false">5m</button>
+        <button data-timeframe="15" aria-pressed="false">15m</button>
+        <button data-timeframe="60" aria-pressed="false">1h</button>
+        <button data-timeframe="240" aria-pressed="false">4h</button>
+        <button data-timeframe="1440" aria-pressed="false">1D</button>
+      </nav>
+    </div>
+    <canvas id="candlestick-chart" width="800" height="400" role="img" aria-label="Candlestick chart of forex price" tabindex="0"></canvas>
+  </section>
+</main>
+
+<!-- Right Sidebar -->
+<aside id="sidebar-right" aria-label="Order panel, positions, trade history">
+  <section id="order-panel" aria-labelledby="order-panel-header">
+    <h2 id="order-panel-header">Place Order</h2>
+    <form id="order-form" aria-describedby="order-form-description">
+      <p id="order-form-description" style="font-size:0.85rem; color:#6b7280;">Fill in order details and click Place Order.</p>
+      <label for="order-symbol">Symbol</label>
+      <select id="order-symbol" name="symbol" required aria-required="true" aria-describedby="order-symbol-desc">
+        <option value="EUR/USD">EUR/USD</option>
+        <option value="USD/JPY">USD/JPY</option>
+        <option value="GBP/USD">GBP/USD</option>
+      </select>
+
+      <label for="order-side">Side</label>
+      <select id="order-side" name="side" required>
+        <option value="BUY">Buy</option>
+        <option value="SELL">Sell</option>
+      </select>
+
+      <label for="order-type">Order Type</label>
+      <select id="order-type" name="orderType" required>
+        <option value="MARKET">Market</option>
+        <option value="LIMIT">Limit</option>
+      </select>
+
+      <div id="limit-price-container" style="display: none;">
+        <label for="order-price">Price</label>
+        <input type="number" id="order-price" name="price" step="0.00001" min="0"/>
+      </div>
+
+      <label for="order-quantity">Quantity (Lots)</label>
+      <input type="number" id="order-quantity" name="quantity" min="0.01" step="0.01" value="1" required/>
+
+      <button type="submit" class="place-order-btn">Place Order</button>
+    </form>
+  </section>
+
+  <section id="positions" aria-label="Open positions">
+    <h2>Positions</h2>
+    <table aria-live="polite" id="positions-table" role="grid">
+      <thead>
+        <tr>
+          <th scope="col">Symbol</th>
+          <th scope="col">Size</th>
+          <th scope="col">Avg Price</th>
+          <th scope="col">Current Price</th>
+          <th scope="col">Unrealized P&L</th>
+          <th scope="col">Side</th>
+        </tr>
+      </thead>
+      <tbody id="positions-tbody">
+      </tbody>
+    </table>
+  </section>
+
+  <section id="trade-history" aria-label="Trade history" style="margin-top: 24px;">
+    <h2>Trade History</h2>
+    <table aria-live="polite" id="trade-history-table" role="grid">
+      <thead>
+        <tr>
+          <th scope="col">Symbol</th>
+          <th scope="col">Side</th>
+          <th scope="col">Size</th>
+          <th scope="col">Price</th>
+          <th scope="col">PnL</th>
+          <th scope="col">Timestamp</th>
+        </tr>
+      </thead>
+      <tbody id="trade-history-tbody"></tbody>
+    </table>
+  </section>
+</aside>
+
+<!-- Bottom Collapsible Bar -->
+<section id="bottom-bar" aria-label="News feed, market movers, economic calendar">
+  <div class="section" id="news-feed" tabindex="0" aria-live="polite">
+    <h3>News Feed</h3>
+    <ul id="news-list" style="padding-left:20px; margin-top:8px; max-height:140px; overflow-y:auto; font-size:0.85rem;">
+    </ul>
+  </div>
+  <div class="section" id="market-movers" tabindex="0" aria-live="polite">
+    <h3>Market Movers</h3>
+    <ul id="movers-list" style="padding-left:20px; margin-top:8px; max-height:140px; overflow-y:auto; font-size:0.85rem;">
+    </ul>
+  </div>
+  <div class="section" id="economic-calendar" tabindex="0" aria-live="polite">
+    <h3>Economic Calendar</h3>
+    <ul id="calendar-list" style="padding-left:20px; margin-top:8px; max-height:140px; overflow-y:auto; font-size:0.85rem;">
+    </ul>
+  </div>
+</section>
+<button id="bottom-toggle" aria-label="Toggle bottom panel" title="Toggle Bottom Panel">
+  <span class="material-icons" aria-hidden="true">expand_more</span>
+</button>

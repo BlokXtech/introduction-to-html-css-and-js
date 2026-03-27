@@ -1,0 +1,43 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body {
+    font-family: "Alumni Sans SC", sans-serif;
+    font-optical-sizing: ;
+    font-weight: ;
+    font-style: ;
+}
+
+h3,
+h4 {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 400;
+    font-style: normal;
+    border-left: 8px solid #2f5061;
+    border-bottom: 1px dotted  #2f5061;
+    padding: 8px 12px;
+    margin: 1.5rem;
+}
+
+
+.food-list {
+    background-color: #fff;
+    padding: 20px 40px;
+    width: 800px;
+    margin: 1.5rem auto;
+}
+
+ul, ol {
+    margin: 1.5rem 1rem;
+}
+
+
+
+li {
+    background-color: #2f5061;
+    color: #fff;
+    margin: 20px 30px;
+    text-align: left;
+}

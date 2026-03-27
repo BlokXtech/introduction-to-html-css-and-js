@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Volkswagen Golf 7 | MK7</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #003580, #0066cc);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .hero-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        .specs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .feature-box {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #003580;
+            color: white;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.03);
+        }
+        .hothatch-badge {
+            background: #e74c3c;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Volkswagen Golf Mk7</h1>
+        <p>2012-2019 | The benchmark in compact cars</p>
+        <a href="../../cars/Volkswagen.html"><button>go back</button></a>
+    </header>
+
+    <div class="container">
+        <img src="https://www.vw.com/content/dam/vwcom/models/golf-7/hero/01.jpg" alt="Golf 7" class="hero-image">
+
+        <div class="specs">
+            <div class="feature-box">
+                <h2>Innovation & Technology</h2>
+                <ul>
+                    <li>MQB platform for improved dynamics</li>
+                    <li>Digital Cockpit (10.25" display)</li>
+                    <li>Discover Pro infotainment (9.2" touch)</li>
+                    <li>LED headlights and tail lights</li>
+                    <li>Advanced driver assistance systems</li>
+                </ul>
+            </div>
+            
+            <div class="feature-box">
+                <span class="hothatch-badge">HOT HATCH</span>
+                <h2>Performance Models</h2>
+                <ul>
+                    <li>GTI with 2.0L TSI (220-245hp)</li>
+                    <li>GTD with 2.0L TDI (184hp)</li>
+                    <li>R with 2.0L TSI (300-310hp)</li>
+                    <li>Performance Pack with LSD</li>
+                    <li>DCC adaptive chassis control</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Technical Specifications</h2>
+        <table>
+            <tr>
+                <th>Model</th>
+                <th>Engine</th>
+                <th>Power</th>
+                <th>0-100 km/h</th>
+                <th>Price (NAD)</th>
+            </tr>
+            <tr>
+                <td>1.0 TSI</td>
+                <td>1.0L Turbo I3</td>
+                <td>115hp</td>
+                <td>9.9s</td>
+                <td>N$ 250,000</td>
+            </tr>
+            <tr>
+                <td>1.4 TSI</td>
+                <td>1.4L Turbo I4</td>
+                <td>150hp</td>
+                <td>8.4s</td>
+                <td>N$ 300,000</td>
+            </tr>
+            <tr>
+                <td>GTI</td>
+                <td>2.0L Turbo I4</td>
+                <td>220hp</td>
+                <td>6.5s</td>
+                <td>N$ 400,000</td>
+            </tr>
+            <tr>
+                <td>Golf R</td>
+                <td>2.0L Turbo I4</td>
+                <td>300hp</td>
+                <td>4.9s</td>
+                <td>N$ 550,000</td>
+            </tr>
+        </table>

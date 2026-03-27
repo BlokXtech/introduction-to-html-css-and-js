@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mercedes-Benz Official Website</title>
+<style>
+    
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #ffffff;
+        color: #333;
+        line-height: 1.6;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    header {
+        background-color: #000; 
+        padding: 1rem 2rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: ;
+    }
+    header a {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: white;
+        margin: 0 15px;
+        gap: 60rem;
+    }
+    header a:hover {
+        text-decoration: none;
+    }
+    main {
+        max-width: 1200px;
+        margin: 2rem auto 4rem auto;
+        padding: 0 1rem;
+    }
+    section.intro {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    section.intro h1 {
+        font-size: 2.8rem;
+        color: #000; /* Mercedes black */
+        margin-bottom: 1rem;
+        font-weight: 800;
+    }
+    section.intro p {
+        font-size: 1.2rem;
+        color: #555;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .box-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 30px;
+        margin: 20px 0;
+    }
+    .box {
+        background-color: #f9f9f9;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        flex: 1 1 45%;
+        min-width: 280px;
+        max-width: 7000px;
+        padding: 1.5rem;
+        text-align: justify;
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+        cursor: pointer;
+        box-sizing: border-box;
+        user-select: none;
+    }
+    .box:hover {
+        box-shadow:
+            0 0 15px 5px rgba(0, 0, 0, 0.7),
+            0 0 30px 10px rgba(0, 0, 0, 0.4);
+        transform: scale(1.05);
+    }
+    .box img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+    }
+    .box h3 {
+        color: #000;
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+        font-size: 1.5rem;
+    }
+    .box p {
+        font-size: 1rem;
+        color: #555;
+    }
+
+ 
+    }
+</style>
+</head>
+<body>
+<header>
+    <a href="../Home.html">Home</a>
+    <a href="../Contact-us.html">Contact Us</a>
+    <a href="Toyota.html">Toyota</a>
+    <a href="Ford.html">Ford</a>
+    <a href="Volkswagen.html">Volkswagen</a>
+</header>
+<main>
+    <section class="intro">
+        <h1>Welcome to Mercedes-Benz</h1>
+        <p>Experience luxury, performance, and innovation with Mercedes-Benz vehicles. Explore our latest models.</p>
+    </section>
+
+
+    <section class="box-container">
+        <article class="box">
+            <img src="../images/mercedes-e-class-wallpapers.jpg" alt="Mercedes E-Class car" />
+            <h3>Mercedes E-Class</h3>
+            <p id="Mercedes E-class">A perfect balance of luxury and performance in a compact sedan.</p>
+        </article>
+
+
+
+        <article class="box">
+            <img src="../images/c63.jpg" alt="Mercedes C63" />
+            <h3>Mercedes C-Class</h3>
+            <p id="desc-e-class">Sophisticated design and advanced technology for a superior driving experience.</p>
+        </article>
+
+
+
+    </section>
+
+
+    <section class="box-container" >
+        <article class="box">
+            <img src="../images/wagon-black.webp" alt="Mercedes G-Wagon" />
+            <h3>Mercedes G-Class</h3>
+            <p id="desc-g-class">An iconic luxury SUV that combines ruggedness with elegance.</p>
+        </article>
+
+
+
+        <article class="box">
+            <img src="../images/mercedes-glc-wallpapers.jpg" alt="Mercedes GLC" />
+            <h3>Mercedes GLC</h3>
+            <p id="Mercedes-glc">A versatile SUV that offers comfort and performance for every journey.</p>
+        </article>
+
+        
+    </section>
+</main>
+</body>
+</html>

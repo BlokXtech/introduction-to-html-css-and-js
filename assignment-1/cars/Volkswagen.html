@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Volkswagen Website</title>
+<style>
+   
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #ffffff;
+        color: #333;
+        line-height: 1.6;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    header {
+        background-color: #004b87; 
+        padding: 1rem 2rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    header a {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: white;
+        margin: 0 15px;
+    }
+    header a:hover {
+        text-decoration: none;
+    }
+    main {
+        max-width: 1200px;
+        margin: 2rem auto 4rem auto;
+        padding: 0 1rem;
+    }
+    section.intro {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    section.intro h1 {
+        font-size: 2.8rem;
+        color: #004b87; /* Volkswagen blue */
+        margin-bottom: 1rem;
+        font-weight: 800;
+    }
+    section.intro p {
+        font-size: 1.2rem;
+        color: #555;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .box-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 30px;
+        margin: 20px 0;
+    }
+    .box {
+        background-color: #f9f9f9;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        flex: 1 1 45%;
+        min-width: 280px;
+        max-width: 7000px;
+        padding: 1.5rem;
+        text-align: justify;
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+        cursor: pointer;
+        box-sizing: border-box;
+        user-select: none;
+    }
+    .box:hover {
+        box-shadow:
+            0 0 15px 5px rgba(0, 75, 135, 0.7),
+            0 0 30px 10px rgba(0, 75, 135, 0.4);
+        transform: scale(1.05);
+    }
+    .box img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+    }
+    .box h3 {
+        color: #004b87; /* Volkswagen blue */
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+        font-size: 1.5rem;
+    }
+    .box p {
+        font-size: 1rem;
+        color: #555;
+    }
+
+    @media (max-width: 768px) {
+        .box {
+            flex: 1 1 100%;
+            max-width: 100%;
+        }
+        header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        header a {
+            margin: 5px 0;
+        }
+    }
+</style>
+</head>
+<body>
+<header>
+    <a href="../Home.html">Home</a>
+    <a href="../Contact-us.html">Contact Us</a>
+    <a href="Toyota.html">Toyota</a>
+    <a href="MercedesBenz.html">Mercedes-Benz</a>
+    <a href="Ford.html">Ford</a>
+</header>
+<main>
+
+    <section class="intro">
+        <h1>Welcome to Volkswagen</h1>
+        <p>Discover the innovation and style of Volkswagen vehicles. Experience modern engineering and exceptional comfort with every drive.</p>
+    </section>
+
+      
+    <section class="box-container">
+        <article class="box">
+            <a href="../brief/volkswagen/golf7.html">
+            <img src="../images/mustang-shelby-gt500.jpg" alt="Volkswagen Golf 7 R" />
+            <h3>Volkswagen Golf 7 R</h3>
+            
+            <p id="Volkswagen-golf-7 R">The Volkswagen Golf 7 R is a performance-focused hatchback known for its powerful engine, all-wheel drive, </p>
+        </article>
+        </a>
+
+
+        <article class="box" >
+            <a href="../brief/volkswagen/amarok.html">
+            <a href="../brief/volkswagen/amarok.html">
+            <img src="../images/vw-amarok-wallpapers.jpg" alt="Volkswagen Amarok" />
+            </a>
+            <h3>Volkswagen Amarok</h3>
+            
+            <p id="Volkswagen-Amarok">The VW Amarok is a premium pick-up truck with a superior comfort.</p>
+        </a>
+        </article>
+    </section>
+
+    <section class="box-container" >
+            <article class="box" >
+                <a href="../brief/volkswagen/tiguan.html">
+                <a href="../brief/volkswagen/tiguan.html"><img src="../images/tiguan.jpg" alt="Volkswagen Tiguan SUV" /></a>
+            <h3>Volkswagen Tiguan</h3>
+            </a>
+            <p id="Volkswagen-tiguan">Compact SUV designed for family adventures with space and safety in mind.</p>
+        </article>
+
+
+        <article class="box">
+            <a href="../brief/volkswagen/golf7.html">
+            <img src="../images/golf-5.jpg" alt="Volkswagen Golf 5 R32" />
+            <h3>Volkswagen Golf 5 r32</h3>
+            </a>
+            <p id="Volkswagen-Golf">The Volkswagen Golf 5 R32 is a high-performance vehicle, featuring a 3.2-liter VR6 engine that produces 250 horsepower.known for its all-wheel drive system and sporty design</p>
+        </article>
+
+    </section>
+</main>
+</body>
+</html>
+

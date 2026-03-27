@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ponhofi SS - School Website</title>
+<style>
+  /* Google Fonts import */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+  /* Reset and base */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #f9faff;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  a {
+    color: #0a74da;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  header {
+    background: #0052cc;
+    color: #fff;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: auto;
+  }
+
+  header h1 {
+    font-weight: 600;
+    font-size: 1.8rem;
+  }
+
+  nav {
+    font-weight: 300;
+  }
+
+  nav a {
+    margin-left: 2rem;
+    font-size: 1rem;
+  }
+
+  /* Hero Section */
+  .hero {
+    background: url('https://images.unsplash.com/photo-1579666286422-1f6664ddaba1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .hero h2 {
+    font-size: 3rem;
+    background: rgba(0, 82, 204, 0.7);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+  }
+
+  /* Sections general styling */
+  section {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+  }
+
+  section h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #0052cc;
+    text-align: center;
+  }
+
+  section p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Academics grid */
+  .academics-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .academic-item {
+    background: #e6ecff;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgb(0 82 204/0.2);
+    text-align: center;
+    font-weight: 600;
+  }
+
+  /* Admissions */
+  .admissions-info {
+    background: #d0e0ff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+  }
+
+  /* Contact form */
+  form {
+    max-width: 500px;
+    margin: 1rem auto 3rem;
+    background: #f1f5ff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0px 0 10px rgb(0 82 204 / 0.1);
+  }
+
+  form label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+  }
+
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    font-family: inherit;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+  }
+
+  form input:focus,
+  form textarea:focus {
+    outline: none;
+    border-color: #0052cc;
+  }
+
+  form button {
+    background: #0052cc;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  form button:hover {
+    background: #003d99;
+  }
+
+  /* Footer */
+  footer {
+    background: #002966;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+  }
+
+  /* Responsive nav */
+  @media (max-width: 600px) {
+    header .container {
+      flex-direction: column;
+      text-align: center;
+    }
+    nav a {
+      margin: 0.5rem 0;
+      display: inline-block;
+    }
+    .hero h2 {
+      font-size: 2rem;
+      padding: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1>Ponhofi SS</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#academics">Academics</a>
+      <a href="#admissions">Admissions</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" aria-label="Welcome Section">
+  <h2>Welcome to Ponhofi Secondary School</h2>
+</section>
+
+<section id="about" aria-label="About Ponhofi SS">
+  <h3>About Us</h3>
+  <p>Ponhofi Secondary School (Ponhofi SS) is dedicated to providing quality education that empowers students for a successful future. Established with a commitment to academic excellence and holistic development, we nurture talent, integrity, and responsibility in every student.</p>
+</section>
+
+<section id="academics" aria-label="Academics Programs at Ponhofi SS">
+  <h3>Academics</h3>
+  <p>Our curriculum is designed to develop critical thinking, creativity, and leadership skills. We offer a variety of academic programs to meet the diverse interests and aspirations of our students, including:</p>
+  <div class="academics-list">
+    <div class="academic-item">Science Stream</div>
+    <div class="academic-item">Arts Stream</div>
+    <div class="academic-item">Business Studies</div>
+    <div class="academic-item">Technology & Innovation</div>
+  </div>
+</section>
+
+<section id="admissions" aria-label="Admissions at Ponhofi SS">
+  <h3>Admissions</h3>
+  <div class="admissions-info">
+    <p>Join Ponhofi SS and become part of a thriving learning community! Admissions are open for the upcoming academic year. To apply, please submit your completed application form along with relevant academic transcripts and identification documents.</p>
+    <p>Visit the school office or download the application form online. For any questions, contact our admissions office directly.</p>
+  </div>
+</section>
+
+<section id="contact" aria-label="Contact Ponhofi SS">
+  <h3>Contact Us</h3>
+  <form id="contactForm" aria-label="Contact Form">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" required placeholder="Your full name" />
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required placeholder="Your email address" />
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="4" required placeholder="Your message"></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>&copy; 2024 Ponhofi Secondary School. All rights reserved.</p>
+</footer>
+
+<script>
+  // Simple contact form submission handler
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Basic form validation feedback
+    const name = this.name.value.trim();
+    const email = this.email.value.trim();
+    const message = this.message.value.trim();
+
+    if (name === '' || email === '' || message === '') {
+      alert('Please fill in all fields before submitting.');
+      return;
+    }
+
+    alert('Thank you ' + name + '! Your message has been received. We will contact you shortly.');
+
+    // Reset the form
+    this.reset();
+  });
+</script>
+
+</body>
+</html>
